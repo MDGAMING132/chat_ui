@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp - Modern Messaging Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-profile">
+                    <div class="avatar avatar-large">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%236366F1'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3EYou%3C/text%3E%3C/svg%3E" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <h3>Your Name</h3>
+                        <span class="status online">Online</span>
+                    </div>
+                </div>
+                <div class="sidebar-actions">
+                    <button class="icon-btn" title="New Chat">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+                        </svg>
+                    </button>
+                    <button class="icon-btn" title="Settings">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"/>
+                </svg>
+                <input type="text" placeholder="Search messages...">
+            </div>
+
+            <div class="chat-tabs">
+                <button class="tab-btn active">All Chats</button>
+                <button class="tab-btn">Groups</button>
+                <button class="tab-btn">Archived</button>
+            </div>
+
+            <div class="chat-list">
+                <div class="chat-item active">
+                    <div class="avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%238B5CF6'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3ESA%3C/text%3E%3C/svg%3E" alt="User">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-header">
+                            <h4>Sarah Anderson</h4>
+                            <span class="time">2m</span>
+                        </div>
+                        <div class="chat-preview">
+                            <p>That sounds great! Let's discuss it tomorrow...</p>
+                            <span class="unread-badge">3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                    <div class="avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2310B981'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3EMJ%3C/text%3E%3C/svg%3E" alt="User">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-header">
+                            <h4>Mike Johnson</h4>
+                            <span class="time">15m</span>
+                        </div>
+                        <div class="chat-preview">
+                            <p>Perfect! See you at the meeting 👍</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                    <div class="avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23F59E0B'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3EDT%3C/text%3E%3C/svg%3E" alt="User">
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-header">
+                            <h4>Design Team</h4>
+                            <span class="time">1h</span>
+                        </div>
+                        <div class="chat-preview">
+                            <p>Emily: The new mockups are ready for review</p>
+                            <span class="unread-badge">12</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                    <div class="avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23EF4444'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3ELD%3C/text%3E%3C/svg%3E" alt="User">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-header">
+                            <h4>Lisa Davis</h4>
+                            <span class="time">3h</span>
+                        </div>
+                        <div class="chat-preview">
+                            <p>Thanks for your help with the project!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                    <div class="avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2314B8A6'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3EJW%3C/text%3E%3C/svg%3E" alt="User">
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-header">
+                            <h4>John Wilson</h4>
+                            <span class="time">5h</span>
+                        </div>
+                        <div class="chat-preview">
+                            <p>Can you send me the files when you get a chance?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                    <div class="avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23EC4899'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3EMT%3C/text%3E%3C/svg%3E" alt="User">
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-header">
+                            <h4>Marketing Team</h4>
+                            <span class="time">Yesterday</span>
+                        </div>
+                        <div class="chat-preview">
+                            <p>Great work on the campaign everyone! 🎉</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%238B5CF6'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3ESA%3C/text%3E%3C/svg%3E" alt="User">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div>
+                        <h3>Sarah Anderson</h3>
+                        <span class="status-text">Active now</span>
+                    </div>
+                </div>
+                <div class="chat-header-actions">
+                    <button class="icon-btn" title="Voice Call">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </button>
+                    <button class="icon-btn" title="Video Call">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+                        </svg>
+                    </button>
+                    <button class="icon-btn" title="More Options">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="messages-container">
+                <div class="date-divider">
+                    <span>Today</span>
+                </div>
+
+                <div class="message received">
+                    <div class="avatar avatar-small">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%238B5CF6'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3ESA%3C/text%3E%3C/svg%3E" alt="User">
+                    </div>
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p>Hey! How's the project coming along?</p>
+                        </div>
+                        <span class="message-time">10:30 AM</span>
+                    </div>
+                </div>
+
+                <div class="message sent">
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p>It's going great! I've finished the design mockups and started working on the implementation.</p>
+                        </div>
+                        <span class="message-time">10:32 AM</span>
+                    </div>
+                </div>
+
+                <div class="message sent">
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p>Want to take a look? I can share the files with you.</p>
+                        </div>
+                        <span class="message-time">10:32 AM</span>
+                    </div>
+                </div>
+
+                <div class="message received">
+                    <div class="avatar avatar-small">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%238B5CF6'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3ESA%3C/text%3E%3C/svg%3E" alt="User">
+                    </div>
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p>Yes, please! That would be awesome 🎨</p>
+                        </div>
+                        <span class="message-time">10:35 AM</span>
+                    </div>
+                </div>
+
+                <div class="message sent">
+                    <div class="message-content">
+                        <div class="message-bubble file-attachment">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="currentColor">
+                                <path d="M7 7a2 2 0 012-2h10l6 6v16a2 2 0 01-2 2H9a2 2 0 01-2-2V7z"/>
+                                <path d="M17 5v6h6"/>
+                            </svg>
+                            <div class="file-info">
+                                <span class="file-name">Project_Mockups_Final.fig</span>
+                                <span class="file-size">2.4 MB</span>
+                            </div>
+                            <button class="download-btn">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="message-time">10:36 AM</span>
+                    </div>
+                </div>
+
+                <div class="message received">
+                    <div class="avatar avatar-small">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%238B5CF6'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3ESA%3C/text%3E%3C/svg%3E" alt="User">
+                    </div>
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p>Perfect! I'll review this and get back to you with feedback by tomorrow.</p>
+                        </div>
+                        <span class="message-time">10:38 AM</span>
+                    </div>
+                </div>
+
+                <div class="message received">
+                    <div class="avatar avatar-small">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%238B5CF6'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3ESA%3C/text%3E%3C/svg%3E" alt="User">
+                    </div>
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p>That sounds great! Let's discuss it tomorrow when we have the team meeting.</p>
+                        </div>
+                        <span class="message-time">10:40 AM</span>
+                    </div>
+                </div>
+
+                <div class="typing-indicator">
+                    <div class="avatar avatar-small">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%238B5CF6'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3ESA%3C/text%3E%3C/svg%3E" alt="User">
+                    </div>
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-input-container">
+                <button class="icon-btn" title="Attach File">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"/>
+                    </svg>
+                </button>
+                <button class="icon-btn" title="Add Emoji">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"/>
+                    </svg>
+                </button>
+                <input type="text" placeholder="Type a message..." class="message-input">
+                <button class="send-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                    </svg>
+                </button>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="profile-section">
+                <div class="avatar avatar-xlarge">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%238B5CF6'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40' font-family='Arial'%3ESA%3C/text%3E%3C/svg%3E" alt="User">
+                </div>
+                <h3>Sarah Anderson</h3>
+                <p class="profile-status">Product Designer</p>
+                <span class="status online">Active now</span>
+            </div>
+
+            <div class="info-section">
+                <h4>Contact Info</h4>
+                <div class="info-item">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                    <div>
+                        <span class="label">Email</span>
+                        <span>sarah.anderson@email.com</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <div>
+                        <span class="label">Phone</span>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h4>Shared Media</h4>
+                <div class="media-grid">
+                    <div class="media-item"></div>
+                    <div class="media-item"></div>
+                    <div class="media-item"></div>
+                    <div class="media-item"></div>
+                    <div class="media-item"></div>
+                    <div class="media-item"></div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h4>Settings</h4>
+                <div class="settings-item">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/>
+                    </svg>
+                    <span>Mute Notifications</span>
+                </div>
+                <div class="settings-item">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"/>
+                        <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/>
+                    </svg>
+                    <span>Block User</span>
+                </div>
+                <div class="settings-item danger">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"/>
+                    </svg>
+                    <span>Delete Chat</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
